@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.google.com/specimen/Overpass" rel="stylesheet" />
+    <link href="rating.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="form">
+      <div class="star-image"><img src="../../images/icon-star.svg" /></div>
+      <h2>How did we do?</h2>
+      <p class="paragraph">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <div class="container">
+        <button onclick="setRating(1)">1</button>
+        <button onclick="setRating(2)">2</button>
+        <button onclick="setRating(3)">3</button>
+        <button onclick="setRating(4)">4</button>
+        <button onclick="setRating(5)">5</button>
+      </div>
+      <br />
+      <button class="submit" onclick="submitFeedback()">SUBMIT</button>
+    </div>
+
+    <script>
+      // JavaScript function to handle button clicks and set the rating
+      let selectedRating = 0; // Initialize with no rating selected
+
+      function setRating(rating) {
+        // Reset the previous selected button to its original color
+        if (selectedRating > 0) {
+          document
+            .querySelector(
+              ".container button:nth-child(" + selectedRating + ")"
+            )
+            .classList.remove("gray");
+        }
+
+        // Set the new selected rating
+        selectedRating = rating;
+
+        // Turn the clicked button gray
+        document
+          .querySelector(".container button:nth-child(" + rating + ")")
+          .classList.add("gray");
+      }
+
+      function submitFeedback() {
+        // Check if a rating has been selected
+        if (selectedRating > 0) {
+          localStorage.setItem("selectedRating", selectedRating);
+          // Navigate to the thankYou.html page
+          window.location.href = "../thankYouPage/thankYou.html";
+        } else {
+          // Display a message or perform some action if no rating is selected
+          alert("Please select a rating before submitting.");
+        }
+      }
+    </script>
+  </body>
+</html>

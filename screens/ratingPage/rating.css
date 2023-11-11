@@ -1,0 +1,85 @@
+@import url("https://fonts.google.com/specimen/Overpass");
+
+* {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  width: 335px;
+  height: 340px;
+  padding: 40px 38px;
+  border-radius: 10%;
+  margin: 10% 37%;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.paragraph {
+  color: hsl(216, 12%, 54%);
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 15px;
+}
+
+.star-image {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 30px;
+}
+
+img {
+  padding: 12px 12px;
+}
+
+.container {
+  display: flex;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+button {
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(216, 12%, 54%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.container button.gray {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+.submit {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  width: 330px;
+  height: 2.5rem;
+  border-radius: 20px;
+  border: none;
+  margin-top: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
