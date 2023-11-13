@@ -7,8 +7,10 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./../../images/favicon-32x32.png"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="rating.js"></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
@@ -30,41 +32,5 @@
       <br />
       <button class="submit" onclick="submitFeedback()">SUBMIT</button>
     </div>
-
-    <script>
-      // JavaScript function to handle button clicks and set the rating
-      let selectedRating = 0; // Initialize with no rating selected
-
-      function setRating(rating) {
-        // Reset the previous selected button to its original color
-        if (selectedRating > 0) {
-          document
-            .querySelector(
-              ".container button:nth-child(" + selectedRating + ")"
-            )
-            .classList.remove("gray");
-        }
-
-        // Set the new selected rating
-        selectedRating = rating;
-
-        // Turn the clicked button gray
-        document
-          .querySelector(".container button:nth-child(" + rating + ")")
-          .classList.add("gray");
-      }
-
-      function submitFeedback() {
-        // Check if a rating has been selected
-        if (selectedRating > 0) {
-          localStorage.setItem("selectedRating", selectedRating);
-          // Navigate to the thankYou.html page
-          window.location.href = "../thankYouPage/thankYou.html";
-        } else {
-          // Display a message or perform some action if no rating is selected
-          alert("Please select a rating before submitting.");
-        }
-      }
-    </script>
   </body>
 </html>

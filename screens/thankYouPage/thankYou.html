@@ -7,8 +7,10 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./../../images/favicon-32x32.png"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="thankYou.js"></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
@@ -17,7 +19,7 @@
         <img src="../../images/illustration-thank-you.svg" />
       </div>
       <div class="count">
-        <p class="count-num" id="selectedRating">You selected 4 out of 5</p>
+        <p class="count-num" id="selectedRating"></p>
       </div>
       <h2>Thank you!</h2>
       <p class="paragraph">
@@ -25,16 +27,5 @@
         more support, don’t hesitate to get in touch!
       </p>
     </div>
-
-    <script>
-      // Get the selected rating from localStorage
-      const selectedRating = localStorage.getItem("selectedRating");
-
-      // Update the content of the 'selectedRating' element
-      if (selectedRating > 0) {
-        const selectedRatingElement = document.getElementById("selectedRating");
-        selectedRatingElement.textContent = `You selected ${selectedRating} out of 5`;
-      }
-    </script>
   </body>
 </html>

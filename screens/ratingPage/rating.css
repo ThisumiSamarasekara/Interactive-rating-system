@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  background-color: black;
+}
+
 .form {
   font-family: "Overpass", sans-serif;
   background-color: hsl(216, 12%, 8%);
@@ -14,6 +18,8 @@
   padding: 40px 38px;
   border-radius: 10%;
   margin: 10% 37%;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -82,4 +88,47 @@ button:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   cursor: pointer;
+}
+
+@media all and (max-width: 1440px) {
+  .form {
+    margin: 170px auto;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .form {
+    width: 300px;
+  }
+  .container {
+    gap: 15px;
+  }
+  .submit {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .form {
+    width: 280px;
+    height: 50%;
+  }
+  .submit {
+    width: 280px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .form {
+    width: 76%;
+    height: 50%;
+    padding: 40px 27px;
+    margin: 100px 16px;
+  }
+  .container {
+    gap: 15px;
+  }
+  .submit {
+    width: 280px;
+  }
 }
